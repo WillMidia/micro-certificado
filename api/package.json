@@ -1,0 +1,14 @@
+{
+  "name": "certificado-api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "amqplib": "^0.8.0",
+    "ioredis": "^4.28.5"
+  }
+}

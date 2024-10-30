@@ -1,0 +1,13 @@
+{
+  "name": "certificado-worker",
+  "version": "1.0.0",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js"
+  },
+  "dependencies": {
+    "pg": "^8.7.1",
+    "amqplib": "^0.8.0",
+    "html-pdf": "^2.2.0"
+  }
+}
