@@ -1,14 +1,16 @@
 {
-  "name": "certificado-api",
+  "name": "certificados-api",
   "version": "1.0.0",
-  "main": "app.js",
+  "description": "API para gerar certificados",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "pg": "^8.7.1",
-    "amqplib": "^0.8.0",
-    "ioredis": "^4.28.5"
+    "pg": "^8.5.1",
+    "redis": "^3.0.2",
+    "amqplib": "^0.5.6",
+    "ejs": "^3.1.5"
   }
 }

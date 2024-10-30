@@ -1,27 +1,28 @@
-version: '3.8'
-
+version: '3'
 services:
   db:
     image: postgres:13
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: certificados
-    volumes:
-      - db_data:/var/lib/postgresql/data
+      POSTGRES_DB: certificados_db
     ports:
       - "5432:5432"
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
 
   rabbitmq:
     image: rabbitmq:3-management
     ports:
-      - "5672:5672"
-      - "15672:15672"
+      - "5673:5672"
+      - "15673:15672"
 
   redis:
-    image: redis:alpine
+    image: redis:6
     ports:
       - "6379:6379"
+    volumes:
+      - ./data/redis:/data
 
   api:
     build: ./api
@@ -40,4 +41,5 @@ services:
       - redis
 
 volumes:
-  db_data:
+  db_data: {}
+  redis_data: {}
